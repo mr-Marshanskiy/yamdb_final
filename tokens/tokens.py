@@ -8,10 +8,9 @@ User = get_user_model()
 def generate_confirmation_code(email):
     user, created = User.objects.get_or_create(email=email)
     token_generator = PasswordResetTokenGenerator()
-    confirmation_code = token_generator.make_token(user)
     if created:
         user.delete()
-    return confirmation_code
+    return token_generator.make_token(user)
 
 
 def get_tokens_for_user(user):
