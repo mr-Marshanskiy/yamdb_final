@@ -6,9 +6,8 @@ from rest_framework.permissions import SAFE_METHODS
 from .filters import TitleFilter
 from .models import Category, Genre, Title
 from .permissions import IsAdminOrReadOnly
-from .serializers import (
-    CategorySerializer, GenreSerializer, TitleSerializerRead,
-    TitleSerializerWrite)
+from .serializers import (CategorySerializer, GenreSerializer,
+                          TitleSerializerRead, TitleSerializerWrite)
 
 
 class BaseViewSet(mixins.CreateModelMixin,
