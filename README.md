@@ -4,7 +4,7 @@
 ### Технологии
 Python 3.8
 Django 3.0.5
-### Запуск проекта
+### Запуск проекта 
 - В папке с файлом manage.py выполните команду:
 python manage.py loaddata fixtures.json
 
