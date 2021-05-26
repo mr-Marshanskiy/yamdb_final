@@ -23,3 +23,5 @@ docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic
 ### Авторы
 mr-Marshanskiy
+
+[![YourActionName Actions Status](https://github.com/mr-Marshanskiy/yamdb_final/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/mr-Marshanskiy/yamdb_final/actions)
