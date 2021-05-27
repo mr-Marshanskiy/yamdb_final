@@ -32,6 +32,17 @@ jobs:
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
             sudo docker stop $(sudo docker ps -a -q)
             sudo docker-compose up -d
+            sudo docker-compose up -d --build
+            sudo docker-compose exec web python manage.py makemigrations users
+            sudo docker-compose exec web python manage.py migrate users
+            sudo docker-compose exec web python manage.py makemigrations titles
+            sudo docker-compose exec web python manage.py migrate titles
+            sudo docker-compose exec web python manage.py makemigrations reviews
+            sudo docker-compose exec web python manage.py migrate reviews
+            sudo docker-compose exec web python manage.py makemigrations tokens
+            sudo docker-compose exec web python manage.py migrate tokens
+            sudo docker-compose exec web python manage.py makemigrations
+            sudo docker-compose exec web python manage.py migrate
 
   send_message:
     runs-on: ubuntu-latest
