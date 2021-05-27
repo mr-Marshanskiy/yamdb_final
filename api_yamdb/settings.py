@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     'reviews',
     'titles',
     'users',
-    'tokens'
+    'tokens',
 ]
 
 MIDDLEWARE = [
