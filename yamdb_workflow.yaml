@@ -67,7 +67,7 @@ jobs:
             #sudo docker-compose stop
             #sudo docker-compose rm web
             # Создаст файл для переменных окружения
-            cd dev/
+            cd yamdb_final/
             touch .env 
             # Наполнит файл переменными окружения из секретов GitHub 
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
